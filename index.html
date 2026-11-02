@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090708">
+  <title>Our Story ❤️</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- شاشة البداية -->
+  <div class="intro" id="intro">
+    <div class="intro-glow"></div>
+    <p class="eyebrow">A STORY THAT'S STILL OURS</p>
+    <h1>بعض الحكايات<br><span>تستحق فرصة تانية</span></h1>
+    <p class="intro-note">And maybe… this is our next chapter.</p>
+    <button class="button button-primary" id="openStory">افتحي حكايتنا <span>♥</span></button>
+    <div class="intro-bottom">MADE WITH LOVE · JUST FOR YOU</div>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#home">H <span>♥</span> T</a>
+    <a class="top-link" href="#chapters">حكايتنا <span>↙</span></a>
+  </header>
+
+  <main id="home">
+    <!-- الرسالة: أول قسم بعد شاشة البداية -->
+    <section class="hero section-wrap" id="message">
+      <div class="section-kicker"><span class="tiny-heart">♥</span> A MESSAGE FOR YOU</div>
+      <h2 class="hero-title">إلى <span>تقى</span>…</h2>
+      <article class="message-card">
+        <div class="card-heart">♥</div>
+        <p id="mainMessage">في كلام كتير جوايا، ويمكن مش كلّه يعرف يطلع بالطريقة اللي أنا عايزها…<br>
+        بس فيه حاجة واحدة متأكد منها: إن حكايتنا لسه ليها صفحات تانية.</p>
+        <div class="message-signature">— من قلبي لقلبك <span>♥</span></div>
+      </article>
+      <a class="scroll-cue" href="#counter"><span></span> كمّلي لتحت</a>
+    </section>
+
+    <!-- عداد المدة -->
+    <section class="counter-section section-wrap" id="counter">
+      <div class="section-kicker">EVERY SECOND COUNTS</div>
+      <h2>من يوم ما بدأت <span>حكايتنا</span></h2>
+      <p class="section-description">كل ثانية بتعدّي هي جزء من حكاية تخصّنا إحنا وبس.</p>
+      <div class="counter-grid" aria-label="مدة العلاقة">
+        <div class="counter-box"><strong id="days">—</strong><span>يوم</span></div>
+        <div class="counter-box"><strong id="hours">—</strong><span>ساعة</span></div>
+        <div class="counter-box"><strong id="minutes">—</strong><span>دقيقة</span></div>
+        <div class="counter-box"><strong id="seconds">—</strong><span>ثانية</span></div>
+      </div>
+      <p class="counter-caption" id="counterCaption">هنحدد تاريخ البداية مع بعض ❤️</p>
+    </section>
+
+    <!-- قائمة الأغاني -->
+    <section class="music-section section-wrap" id="playlist">
+      <div class="section-kicker">SOUNDTRACK OF US</div>
+      <h2>أغاني <span>بتفكّرني بينا</span></h2>
+      <p class="section-description">أربع أغاني، وكل واحدة ليها مكانها هنا. ❤️</p>
+
+      <div class="playlist-list">
+        <article class="song-card">
+          <div class="song-message"><span class="message-label">رسالة صغيرة ليكي</span><p contenteditable="true" spellcheck="false">اكتب رسالتك هنا...</p></div>
+          <div class="song-main"><div class="vinyl" aria-hidden="true"><span>♥</span></div><div class="playlist-info"><span class="track-label">TRACK 01</span><h3>معقول أنساك</h3><p>فضل شاكر</p></div></div>
+          <audio class="song-audio" preload="metadata" src="music/معقول انساك.mp3"></audio>
+          <div class="audio-controls"><button class="play-button" type="button" aria-label="تشغيل ">▶</button><span class="audio-time current-time">0:00</span><input class="audio-progress" type="range" min="0" max="100" value="0" step="0.1" aria-label="تقدم الأغنية"><span class="audio-time duration">0:00</span><button class="mute-button" type="button" aria-label="كتم الصوت">♫</button></div>
+        </article>
+
+        <article class="song-card">
+          <div class="song-message"><span class="message-label">رسالة صغيرة ليكي</span><p contenteditable="true" spellcheck="false">اكتب رسالتك هنا...</p></div>
+          <div class="song-main"><div class="vinyl" aria-hidden="true"><span>♥</span></div><div class="playlist-info"><span class="track-label">TRACK 02</span><h3>وياه</h3><p>عمرو دياب</p></div></div>
+          <audio class="song-audio" preload="metadata" src="music/وياه.mp3"></audio>
+          <div class="audio-controls"><button class="play-button" type="button" aria-label="تشغيل ">▶</button><span class="audio-time current-time">0:00</span><input class="audio-progress" type="range" min="0" max="100" value="0" step="0.1" aria-label="تقدم الأغنية"><span class="audio-time duration">0:00</span><button class="mute-button" type="button" aria-label="كتم الصوت">♫</button></div>
+        </article>
+
+        <article class="song-card">
+          <div class="song-message"><span class="message-label">رسالة صغيرة ليكي</span><p contenteditable="true" spellcheck="false">اكتب رسالتك هنا...</p></div>
+          <div class="song-main"><div class="vinyl" aria-hidden="true"><span>♥</span></div><div class="playlist-info"><span class="track-label">TRACK 03</span><h3>مع الأيام</h3><p>رامي صبري</p></div></div>
+          <audio class="song-audio" preload="metadata" src="music/مع الايام.mp3"></audio>
+          <div class="audio-controls"><button class="play-button" type="button" aria-label="تشغيل مع الأيام">▶</button><span class="audio-time current-time">0:00</span><input class="audio-progress" type="range" min="0" max="100" value="0" step="0.1" aria-label="تقدم الأغنية"><span class="audio-time duration">0:00</span><button class="mute-button" type="button" aria-label="كتم الصوت">♫</button></div>
+        </article>
+
+        <article class="song-card">
+          <div class="song-message"><span class="message-label">رسالة صغيرة ليكي</span><p contenteditable="true" spellcheck="false">اكتب رسالتك هنا...</p></div>
+          <div class="song-main"><div class="vinyl" aria-hidden="true"><span>♥</span></div><div class="playlist-info"><span class="track-label">TRACK 04</span><h3>قمرين</h3><p>عمرو دياب</p></div></div>
+          <audio class="song-audio" preload="metadata" src="music/قمرين.mp3"></audio>
+          <div class="audio-controls"><button class="play-button" type="button" aria-label="تشغيل قمرين">▶</button><span class="audio-time current-time">0:00</span><input class="audio-progress" type="range" min="0" max="100" value="0" step="0.1" aria-label="تقدم الأغنية"><span class="audio-time duration">0:00</span><button class="mute-button" type="button" aria-label="كتم الصوت">♫</button></div>
+        </article>
+      </div>
+      <p class="small-note">لتوصيل الأغاني، غيّر اسم الملف داخل src في الكود لاسم ملف MP3 الموجود عندك داخل فولدر music.</p>
+    </section>
+
+    <!-- فصول الحكاية -->
+    <section class="chapters-section section-wrap" id="chapters">
+      <div class="section-kicker">THE CHAPTERS OF US</div>
+      <h2>حكايتنا… <span>فصل ورا فصل</span></h2>
+      <p class="section-description">كل فصل له حكايته، وصورته، وتفاصيله اللي محدش غيرنا يعرف معناها.</p>
+
+      <div class="chapter-list">
+        <article class="chapter-card">
+          <div class="chapter-art art-one"><span class="art-symbol">01</span><span class="art-caption">THE BEGINNING</span></div>
+          <div class="chapter-content">
+            <span class="chapter-number">CHAPTER ONE</span>
+            <h3>البداية</h3>
+            <p>من هنا كل حاجة بدأت…</p>
+            <a class="button button-outline" href="chapters/chapter-1.html">افتحي الفصل <span>↗</span></a>
+          </div>
+        </article>
+
+        <article class="chapter-card">
+          <div class="chapter-art art-two"><span class="art-symbol">02</span><span class="art-caption">CLOSER TO YOU</span></div>
+          <div class="chapter-content">
+            <span class="chapter-number">CHAPTER TWO</span>
+            <h3>لما قربنا</h3>
+            <p>تفاصيل صغيرة، بس كانت بتعني كتير.</p>
+            <a class="button button-outline" href="chapters/chapter-2.html">افتحي الفصل <span>↗</span></a>
+          </div>
+        </article>
+
+        <article class="chapter-card">
+          <div class="chapter-art art-three"><span class="art-symbol">03</span><span class="art-caption">OUR MEMORIES</span></div>
+          <div class="chapter-content">
+            <span class="chapter-number">CHAPTER THREE</span>
+            <h3>ذكرياتنا</h3>
+            <p>لحظات بسيطة فضلت عايشة جوانا.</p>
+            <a class="button button-outline" href="chapters/chapter-3.html">افتحي الفصل <span>↗</span></a>
+          </div>
+        </article>
+
+        <article class="chapter-card">
+          <div class="chapter-art art-four"><span class="art-symbol">04</span><span class="art-caption">A NEW CHANCE</span></div>
+          <div class="chapter-content">
+            <span class="chapter-number">CHAPTER FOUR</span>
+            <h3>فرصة جديدة</h3>
+            <p>مش بنمسح اللي فات… بنكتب اللي جاي بشكل أحسن.</p>
+            <a class="button button-outline" href="chapters/chapter-4.html">افتحي الفصل <span>↗</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-heart">♥</div>
+      <p>لسه فيه كلام كتير… ولسه فيه حكاية.</p>
+      <span>MADE FOR OUR STORY · H × T</span>
+    </footer>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

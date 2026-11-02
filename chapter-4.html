@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090708">
+
+    <title>الفصل الرابع | Our Story</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/chapter.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <a class="brand" href="../index.html">H <span>♥</span> T</a>
+
+        <a class="top-link" href="../index.html#chapters">
+            ↩ الرجوع للفصول
+        </a>
+    </header>
+
+    <main class="chapter-page">
+
+        <div class="section-kicker">CHAPTER FOUR</div>
+
+        <div class="chapter-cover cover-four">
+            <span>04</span>
+            <small>OUR STORY CONTINUES</small>
+        </div>
+
+        <h1>Chapter 4</h1>
+
+      <!-- Voice Message -->
+<section class="voice-message">
+
+    <div class="voice-icon">🎙️</div>
+
+    <h2>رسالة بصوتي ليكي ❤️</h2>
+
+    <p class="voice-caption">
+        في كلام حبيت تسمعيه بصوتي...
+    </p>
+
+    <audio id="chapter4-audio" preload="metadata">
+        <source src="../audio/211.m4a" type="audio/mpeg">
+        المتصفح لا يدعم تشغيل الصوت.
+    </audio>
+
+    <button
+        type="button"
+        class="voice-play-button"
+        onclick="toggleVoice()"
+        id="voice-play-button"
+    >
+        ▶ تشغيل الريكورد
+    </button>
+
+    <div class="voice-progress">
+        <span id="voice-current">00:00</span>
+
+        <input
+            type="range"
+            id="voice-seek"
+            value="0"
+            min="0"
+            max="100"
+            step="0.1"
+            aria-label="تقديم وتأخير التسجيل"
+        >
+
+        <span id="voice-duration">00:00</span>
+    </div>
+
+</section>
+        <!-- معرض الصور -->
+        <section class="memories-gallery">
+
+            <!-- الصورة الرئيسية -->
+            <div class="main-memory">
+                <img
+                    src="../images/16.jpg"
+                    alt="Memory"
+                    class="memory-image"
+                    onclick="openMemory(this)"
+                >
+            </div>
+
+            <!-- باقي الصور -->
+            <div class="memories-grid">
+
+                <img src="../images/chapter4-photo-2.jpg"
+                     alt="Memory"
+                     class="memory-image"
+                     onclick="openMemory(this)">
+
+                <img src="../images/chapter4-photo-3.jpg"
+                     alt="Memory"
+                     class="memory-image"
+                     onclick="openMemory(this)">
+
+                <img src="../images/chapter4-photo-4.jpg"
+                     alt="Memory"
+                     class="memory-image"
+                     onclick="openMemory(this)">
+
+                <img src="../images/chapter4-photo-5.jpg"
+                     alt="Memory"
+                     class="memory-image"
+                     onclick="openMemory(this)">
+
+            </div>
+
+        </section>
+
+        <!-- تكبير الصور -->
+        <div id="memory-viewer" onclick="closeMemory()">
+            <span class="close-memory">&times;</span>
+            <img id="memory-viewer-image" src="" alt="Memory">
+        </div>
+
+        <!-- التنقل بين الفصول -->
+        <nav class="chapter-navigation">
+
+            <a class="button button-outline" href="chapter-3.html">
+                ← الفصل السابق
+            </a>
+
+            <a class="button button-primary" href="../index.html#chapters">
+                الرجوع للحكاية ❤️
+            </a>
+
+        </nav>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-heart">♥</div>
+        <p>لسه الحكاية مكملة.</p>
+    </footer>
+
+    <script>
+        function openMemory(image) {
+            const viewer = document.getElementById("memory-viewer");
+            const viewerImage =
+                document.getElementById("memory-viewer-image");
+
+            viewerImage.src = image.src;
+            viewer.style.display = "flex";
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeMemory() {
+            document.getElementById("memory-viewer").style.display = "none";
+            document.body.style.overflow = "";
+        }
+
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Escape") {
+                closeMemory();
+            }
+        });
+        const voiceAudio = document.getElementById("chapter4-audio");
+const voiceButton = document.getElementById("voice-play-button");
+const voiceSeek = document.getElementById("voice-seek");
+const voiceCurrent = document.getElementById("voice-current");
+const voiceDuration = document.getElementById("voice-duration");
+
+function formatVoiceTime(seconds) {
+    if (!Number.isFinite(seconds)) return "00:00";
+
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+
+    return String(minutes).padStart(2, "0") + ":" +
+           String(remainingSeconds).padStart(2, "0");
+}
+
+function toggleVoice() {
+    if (voiceAudio.paused) {
+        voiceAudio.play().catch(() => {
+            voiceButton.textContent = "تعذّر التشغيل — تأكد من ملف الصوت";
+        });
+    } else {
+        voiceAudio.pause();
+    }
+}
+
+voiceAudio.addEventListener("loadedmetadata", () => {
+    voiceDuration.textContent = formatVoiceTime(voiceAudio.duration);
+});
+
+voiceAudio.addEventListener("timeupdate", () => {
+    voiceCurrent.textContent = formatVoiceTime(voiceAudio.currentTime);
+
+    if (Number.isFinite(voiceAudio.duration) && voiceAudio.duration > 0) {
+        voiceSeek.value =
+            (voiceAudio.currentTime / voiceAudio.duration) * 100;
+    }
+});
+
+voiceSeek.addEventListener("input", () => {
+    if (Number.isFinite(voiceAudio.duration) && voiceAudio.duration > 0) {
+        voiceAudio.currentTime =
+            (Number(voiceSeek.value) / 100) * voiceAudio.duration;
+    }
+});
+
+voiceAudio.addEventListener("play", () => {
+    voiceButton.textContent = "⏸ إيقاف مؤقت";
+});
+
+voiceAudio.addEventListener("pause", () => {
+    voiceButton.textContent = "▶ استكمال الريكورد";
+});
+
+voiceAudio.addEventListener("ended", () => {
+    voiceButton.textContent = "↻ تشغيل الريكورد تاني";
+    voiceSeek.value = 0;
+});
+    </script>
+
+</body>
+</html>

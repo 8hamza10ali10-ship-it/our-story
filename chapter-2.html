@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090708">
+
+    <title>الفصل الثاني | Our Story</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/chapter.css">
+</head>
+
+<body>
+
+    <!-- الشريط العلوي الأصلي -->
+    <header class="topbar">
+        <a class="brand" href="../index.html">H <span>♥</span> T</a>
+        <a class="top-link" href="../index.html#chapters">
+            ↩ الرجوع للفصول
+        </a>
+    </header>
+
+    <main class="chapter-page">
+
+        <!-- غلاف الفصل الأصلي -->
+        <div class="section-kicker">CHAPTER TWO</div>
+
+        <div class="chapter-cover cover-two">
+            <span>02</span>
+            <small>CLOSER TO YOU</small>
+        </div>
+
+        <h1>Chapter 2</h1>
+
+        <!-- مكان رسالتك -->
+        <article class="chapter-letter">
+            <p>
+              دي بقاممكن نسميها مرحلة اننا خلاص دخلنا جوا العاقه وبقينا بجد مع بعض وقتها انا حرفيا كنت عايش احلا ايام حياتي مكنتش مركز فاي حاجه خلاص ولا شاغل بالي انا بس معاكي واي حاجه تاني فداهيه مش مهم ان شاء مش هتكون هي الفتره دي بس اللي هنبقا فيها كدا ان شاء الفتره الجايه هنكون احسن من كدا كمان عشان انا بحبك ومش مستعد اشوفنا بعاد تاني
+            </p>
+        </article>
+
+        <!-- معرض الصور -->
+        <section class="memories-gallery">
+
+            <!-- الصورة الرئيسية -->
+            <div class="main-memory">
+                <img
+                    src="../images/6.jpg"
+                    alt="Memory"
+                    class="memory-image"
+                    onclick="openMemory(this)"
+                >
+            </div>
+
+            <!-- باقي الصور -->
+            <div class="memories-grid">
+
+                <img src="../images/7.jpg"
+                     alt="Memory" class="memory-image"
+                     onclick="openMemory(this)">
+
+                <img src="../images/8.jpg"
+                     alt="Memory" class="memory-image"
+                     onclick="openMemory(this)">
+
+                <img src="../images/9.jpg"
+                     alt="Memory" class="memory-image"
+                     onclick="openMemory(this)">
+
+                <img src="../images/10.jpg"
+                     alt="Memory" class="memory-image"
+                     onclick="openMemory(this)">
+
+            </div>
+
+        </section>
+
+        <!-- تكبير الصور -->
+        <div id="memory-viewer" onclick="closeMemory()">
+            <span class="close-memory">&times;</span>
+            <img id="memory-viewer-image" src="" alt="Memory">
+        </div>
+
+        <!-- التنقل الأصلي بين الفصول -->
+        <nav class="chapter-navigation">
+            <a class="button button-outline" href="chapter-1.html">
+                الفصل السابق
+            </a>
+
+            <a class="button button-primary" href="chapter-3.html">
+                الفصل التالي <span>↗</span>
+            </a>
+        </nav>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-heart">♥</div>
+        <p>لسه الحكاية مكملة.</p>
+    </footer>
+
+    <script>
+        function openMemory(image) {
+            const viewer = document.getElementById("memory-viewer");
+            const viewerImage =
+                document.getElementById("memory-viewer-image");
+
+            viewerImage.src = image.src;
+            viewer.style.display = "flex";
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeMemory() {
+            document.getElementById("memory-viewer").style.display = "none";
+            document.body.style.overflow = "";
+        }
+
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Escape") {
+                closeMemory();
+            }
+        });
+    </script>
+
+</body>
+</html>
